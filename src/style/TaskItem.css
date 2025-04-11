@@ -1,0 +1,74 @@
+/* TaskItem.css */
+.task-item {
+    padding: 1rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease;
+    position: relative;
+  }
+  
+  .task-item:hover {
+    transform: translateY(-3px);
+  }
+  
+  .task-item.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+  }
+  
+  .task-item h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #ffffff;
+  }
+  
+  .task-item p {
+    margin: 0.4rem 0;
+    color: #cccccc;
+  }
+  
+  .priority {
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+  
+  .priority::before {
+    content: '● ';
+  }
+  
+  .priority:contains('high')::before {
+    color: #e53935;
+  }
+  
+  .priority:contains('medium')::before {
+    color: #ffb300;
+  }
+  
+  .priority:contains('low')::before {
+    color: #43a047;
+  }
+  
+  .actions {
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .actions button {
+    padding: 0.5rem 0.8rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    background: #3949ab;
+    color: white;
+    transition: background 0.3s ease;
+  }
+  
+  .actions button:hover {
+    background: #303f9f;
+  }
+  
